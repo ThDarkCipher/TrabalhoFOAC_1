@@ -1,0 +1,6 @@
+RISC-V Reference
+https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/notebooks/RISCV/RISCV_CARD.pdf
+Instruções de Máquina (ISA Instruction Set Architecture) Uma introdução a RISC-V (Slide)
+https://www.ime.usp.br/~song/mac344/slides07a-isa-risc-v.pdf
+RV32I, RV64I Instructions
+https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#lh
