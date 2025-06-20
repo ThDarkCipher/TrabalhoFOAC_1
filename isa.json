@@ -142,7 +142,7 @@
             "opcode": "0010011",
             "funct3": "000",
             "type": "I",
-            "paramCount": 2,
+            "paramCount": 3,
             "params": [
                 "rd",
                 "rs1",
@@ -166,7 +166,7 @@
             "opcode": "0010011",
             "funct3": "110",
             "type": "I",
-            "paramCount": 2,
+            "paramCount": 3,
             "params":[
                 "rd",
                 "rs1",
