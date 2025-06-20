@@ -64,6 +64,7 @@
             "mnemonic": "sw",
             "opcode": "0100011",
             "funct3": "010",
+            "type": "S",
             "paramCount": 2,
             "params":[
                 "rs2",
@@ -76,6 +77,7 @@
             "opcode": "0110011",
             "funct3": "000",
             "funct7": "0000000",
+            "type": "R",
             "paramCount": 3,
             "params":[
                 "rd",
@@ -101,6 +103,7 @@
             "opcode": "0110011",
             "funct3": "111",
             "funct7": "0000000",
+            "type": "R",
             "paramCount": 3,
             "params":[
                 "rd",
@@ -134,6 +137,18 @@
                 "rs2"
             ]
         },
+        "addi":{
+            "mnemonic": "addi",
+            "opcode": "0010011",
+            "funct3": "000",
+            "type": "I",
+            "paramCount": 2,
+            "params": [
+                "rd",
+                "rs1",
+                "imm"
+            ]
+        },
         "andi":{
             "mnemonic": "andi",
             "opcode": "0010011",
@@ -144,6 +159,31 @@
                 "rd",
                 "rs1",
                 "imm"
+            ]
+        },
+        "ori":{
+            "mnemonic": "ori",
+            "opcode": "0010011",
+            "funct3": "110",
+            "type": "I",
+            "paramCount": 2,
+            "params":[
+                "rd",
+                "rs1",
+                "imm"
+            ]
+        },
+        "sll":{
+            "mnemonic": "sll",
+            "opcode": "0110011",
+            "funct3":"001",
+            "funct7":"0000000",
+            "type": "R",
+            "paramCount": 3,
+            "params":[
+                "rd",
+                "rs1",
+                "rs2"
             ]
         },
         "srl":{
@@ -159,12 +199,24 @@
                 "rs2"
             ]
         },
+        "bne":{
+            "mnemonic":"bne",
+            "opcode": "1100011",
+            "funct3": "001",
+            "type": "B",
+            "paramCount": 3,
+            "params":[
+                "rs1",
+                "rs2",
+                "imm"
+            ]
+        },
         "beq":{
             "mnemonic": "beq",
             "opcode": "1100011",
             "funct3": "000",
             "type": "B",
-            "paramCount": 3 ,
+            "paramCount": 3,
             "params": [
                 "rs1",
                 "rs2",
@@ -204,6 +256,19 @@
             "funct3",
             "imm[4:1]",
             "imm[11]",
+            "opcode"
+        ],
+        "U":[
+            "imm[31:12]",
+            "rd",
+            "opcode"
+        ],
+        "J":[
+            "imm[20]",
+            "imm[10:1]",
+            "imm[11]",
+            "imm[19:12]",
+            "rd",
             "opcode"
         ]
     },
