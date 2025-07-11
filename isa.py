@@ -105,7 +105,10 @@ class ISA:
                         base = 16
                     elif params[field].startswith("0b"):
                         base = 2
-                    params[field] = self.get_twos_complement_binary(int(params[field], base), 13)
+                    try:
+                        params[field] = self.get_twos_complement_binary(int(params[field], base), 13)
+                    except:
+                        self.compilationError(f"Erro na linha {linha} no PC {self.pc} no paramentro {params[field]}.Esperado um imediato mas foi passado outro parametro")
             params["funct3"] = self.instrucoes[tokens[0]].funct3
             params["opcode"] = self.instrucoes[tokens[0]].opcode
             try:
